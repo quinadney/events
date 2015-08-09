@@ -8,15 +8,16 @@
   <div class="submission">
     <form>
       <div style="font-weight: bold;">Event or Establishment?</div>
-      <div>Title:<input type="text"></div>
-      <div>Information:<input type="text"></div>
-      <div>Category:<input type="text"></div>
-      <div>District:<input type="text"></div>
-      <div>Address:<input type="text"></div>
-      <div>Pic:<input type="text"></div>
+      <div>Title:<input ng-model="title" type="text"></div>
+      <div>{{title}}</div>
+      <div>Information:<input ng-model="information" type="text"></div>
+      <div>Category:<input ng-model="cateogry" type="text"></div>
+      <div>District:<input ng-model="district" type="text"></div>
+      <div>Address:<input ng-model="address" type="text"></div>
+      <div>Pic:<input ng-model="pic" type="text"></div>
       <br><br>
-      <div>Start Date:<input type="text"></div>
-      <div>Stop Date:<input type="text"></div>
+      <div>Start Date:<input ng-model="startDate" type="text"></div>
+      <div>Stop Date:<input ng-model="stopDate" type="text"></div>
     </form>
   </div>
 </div>
