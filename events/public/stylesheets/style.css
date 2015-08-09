@@ -83,7 +83,6 @@ img {
 .container {
   width: 82%;
   margin-left: 15%;
-  margin-top: 10%;
   margin-bottom: 3%;
 }
 
@@ -202,6 +201,18 @@ img {
   margin-top: 1%;
 }
 
+.link a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo {
   margin-right: 30%;
+}
+
+
+/*Angular*/
+ui-view {
+  margin-top: 10%;
+  display: inline-block;
 }
