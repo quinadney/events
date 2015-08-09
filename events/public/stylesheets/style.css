@@ -182,7 +182,7 @@ img {
 /*Navbar*/
 .nav {
   position: fixed;
-  background-color: #eee;
+  background-color: RGBA(238, 238, 238, .98);
   top: 0;
   left: 0;
   right: 0;
@@ -203,5 +203,5 @@ img {
 }
 
 .logo {
-  margin-right: 36%;
+  margin-right: 30%;
 }
