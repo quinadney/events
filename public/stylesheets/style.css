@@ -98,6 +98,7 @@ img {
   left: 2%;
   z-index: 1;
   padding-top: 15%;
+  border-right: 1px dashed;
 }
 
 .filters a {
@@ -130,6 +131,9 @@ img {
   margin: 1%;
   background-color: #E0E0E0;
   box-shadow: 0px 0px 1px 0px;
+  border:1px solid #ccc;
+  border-bottom: 2px solid #bbb;
+  border-top: 1px solid #ddd;
 }
 
 /*@media only screen and (min-width : 768px) and (max-width : 1024px) {*/
@@ -215,6 +219,7 @@ ui-view {
   display: inline-block;
   margin-top: 10%;
   margin-left: 15%;
+  width: 80%;
 }
 
 
@@ -241,9 +246,9 @@ form input {
   border-bottom: 1px solid black;
   width: 100%;
   position: relative;
-  /*left: 15px;*/
-  height: 30px;
-  font-size: 22px;
+  height: 25px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .submission {
@@ -252,6 +257,25 @@ form input {
   margin-left: 4%;
   margin-right: 4%;
   margin-top: 2%;
+  text-align: justify;
+}
+
+.submission p {
+  padding: 7px;
+  text-indent: 20px;
+}
+
+.submission a {
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 147px;
+  padding: 3px 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.submissions {
+  margin-left: -15%;
 }
 
 .blogImage {
@@ -279,4 +303,13 @@ h1 {
 .subTitle {
   text-align: center;
   width: 100%;
+  margin-left: -9%;
+}
+
+.options {
+  width: 85%;
+  margin: auto;
+}
+.active {
+  background-color: #c0c0c0;
 }

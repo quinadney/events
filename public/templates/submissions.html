@@ -3,21 +3,30 @@
 </div>
 <div class="submissions">
   <div class="submission">
-  <p>Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.</p>
+  <p>Here is where you type about how you want someone to submit an event. Maybe some, "If you're confused, <u>email us</u>".</p>
+  <p>Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</p>
+  </div>
+  <div ng-repeat="post in posts" style="width:100%">
+    {{post.title}} - {{post.information}}
   </div>
   <div class="submission">
     <form>
-      <div style="font-weight: bold;">Event or Establishment?</div>
-      <div>Title:<input ng-model="title" type="text"></div>
-      <div>{{title}}</div>
-      <div>Information:<input ng-model="information" type="text"></div>
-      <div>Category:<input ng-model="cateogry" type="text"></div>
-      <div>District:<input ng-model="district" type="text"></div>
-      <div>Address:<input ng-model="address" type="text"></div>
-      <div>Pic:<input ng-model="pic" type="text"></div>
-      <br><br>
-      <div>Start Date:<input ng-model="startDate" type="text"></div>
-      <div>Stop Date:<input ng-model="stopDate" type="text"></div>
+      <div>
+        <div class="options">
+          <a ng-class="{'active': eventActive}" class="event" style="font-weight: bold; border: 1px solid black; border-radius: 147px;" ng-click="changeType('event')">Event</a> or <a style="font-weight: bold;" ng-class="{'active': establishmentActive}" class="location" ng-click="changeType('establishment')">Location</a>
+        </div>
+      </div>
+      <div><input ng-model="title" placeholder="Title" type="text"></div>
+      <div><input ng-model="information" placeholder="Information" type="text"></div>
+      <div><input ng-model="category" placeholder="Category" type="text"></div>
+      <div><input ng-model="size" placeholder="Size" type="text"></div>
+      <div><input ng-model="tags" placeholder="Tags" type="text"></div>
+      <div><input ng-model="district" placeholder="District" type="text"></div>
+      <div><input ng-model="address" placeholder="Address" type="text"></div>
+      <div><input ng-model="pic" placeholder="Picture" type="text"></div>
+      <div ng-if="type === 'event'"><input ng-model="startDate" placeholder="Start Date" type="text"></div>
+      <div ng-if="type === 'event'"><input ng-model="stopDate" placeholder="Stop Date" type="text"></div>
+      <input type="submit" ng-click="createPost()">
     </form>
   </div>
 </div>

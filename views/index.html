@@ -7,21 +7,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
         <link href='http://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'></head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-        <!-- <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script> -->
+        <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+        <script src="/javascripts/jquery.min.js"></script>
+        <script src="/javascripts/angular.min.js"></script>
+        <script src="/javascripts/angular-ui-router.min.js"></script>
+        <script src="/javascripts/ng-infinite-scroll.js"></script>
         <script src="/javascripts/angularApp.js"></script>
     <body ng-app="eventsApp">
         <div class="nav">
             <div class="link logo"><img src="images/logo.png"></div>
             <div class="link"><a href="#/home">Events</a></div>
             <div class="link"><a href="#/blog">What's Up?</a></div>
-            <div class="link"><a href="#/submissions">Submissions</a></div>
+            <div class="link"><a href="#/submissions">Submissions</a></div>       
         </div>
 
-        <div class="filters">
+        <div class="filters" ng-if="($state.current.name === 'blog') || ($state.current.name === 'home')">
             <ul>
                 <li class="filter title">Filter by:</li>
                 <li class="filter location"><i class="fa fa-map-pin"></i> Location</li>
@@ -36,7 +36,7 @@
             </ul>
         </div>
 
-        <ui-view></ui-view>
+        <ui-view class="main-view"></ui-view>
     
     </body>
 </html>

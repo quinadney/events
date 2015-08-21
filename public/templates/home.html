@@ -1,26 +1,14 @@
-<!-- <div class="filters">
-    <ul>
-        <li class="filter title">Filter by:</li>
-        <li class="filter location"><i class="fa fa-map-pin"></i> Location</li>
-        <li class="filter category"><i class="fa fa-tags"></i> Category</li>
-        <li class="filter search"><i class="fa fa-search"></i> Search</li>
-        <li class="social">
-            <i class="fa fa-facebook-square"></i>
-            <i class="fa fa-twitter-square"></i>
-            <i class="fa fa-tumblr-square"></i>
-            <i class="fa fa-envelope-square"></i>
-        </li>
-    </ul>
+<!-- <div infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+  <img ng-repeat='image in images' ng-src='http://placehold.it/225x250&text={{image}}'>
 </div> -->
-
-<!-- <div class="nav">
-    <div class="link logo"><img src="images/logo.png"></div>
-    <div class="link">Events</div>
-    <div class="link"><a href="#/blog">What's Up?</a></div>
-    <div class="link"><a href="#/submissions">Submissions</a></div>
-</div> -->
-
-<div class="events container">
+<!-- <div class="row" > -->
+    <div class="box {{post.size}}" ng-repeat="post in posts">
+        <img ng-src="images/{{post.size}}2.jpg">
+        <div class="picText">{{post.information}}</div>
+    </div>
+<!-- </div> -->
+<div class="events container" infinite-scroll="loadMore()" infinite-scroll-distance="3">
+{{posts}}
     <div class="row">
         <div class="about box medium first">
             <img src="images/medium2.jpg"/>
