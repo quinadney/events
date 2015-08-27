@@ -69,5 +69,5 @@ module.exports = router;
 
 
 
-app.listen(8080);
-console.log('Magic happens on 8080');
+app.listen(process.env.PORT || 3000);
+console.log('Magic happens on 3000');
